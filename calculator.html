@@ -19,14 +19,7 @@
           var days_per_week = +$("#days").val();
           var weeks_off = +$("#weeks").val();
 
-          var per_hour = 0;
-          console.log(yearly_income);
-          console.log(hours_per_day);
-          console.log(days_per_week);
-          console.log(weeks_off);
-          console.log(hours_per_day * days_per_week);
-          console.log(52-weeks_off);
-          per_hour = yearly_income / (hours_per_day * days_per_week * (52-weeks_off))
+          var per_hour = yearly_income / (hours_per_day * days_per_week * (52-weeks_off))
 
           $("#answers").append(per_hour + " Per Hour");
         });
