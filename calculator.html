@@ -26,9 +26,9 @@
           console.log(hours_per_day);
           console.log(days_per_week);
           console.log(weeks_off);
-          console.log(hours * days);
+          console.log(hours_per_day * days_per_week);
           console.log(52-weeks_off);
-          per_hour = yearly_income / (hours * days * (52-weeks_off))
+          per_hour = yearly_income / (hours_per_day * days_per_week * (52-weeks_off))
 
           alert(per_hour);
         });
