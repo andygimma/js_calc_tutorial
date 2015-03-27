@@ -1,20 +1,39 @@
 <html>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  </head>
-  <body>
-    <form>
-      Income: <input type="text" id="income"><br>
-      Hours: <input type="text" id="hours"><br>
-      Days per week: <input type="text" id="hours"><br>
-      Weeks off: <input type="text" id="week"><br>
-      <button class="submit">Calculate</button>
-    </form>
+ <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ </head>
+ <body>
+   <form>
+     Income: <input type="text" id="income"><br/>
+     Hours: <input type="text" id="hours"><br/>
+     Days per week: <input type="text" id="days"><br/>
+     Weeks off: <input type="text" id="weeks"><br/>
+     <button class="submit">Calculate</button>
+   </form>
 
-    <div id="answers">
-    </div>
-  </body>
-  <script>
+   <div id="answers">
+   </div>
+    <script>
+      $(document).ready(function() {
+        $(".submit").click(function(){
+          var yearly_income = +$("#income").val();
+          var hours_per_day = +$("#hours").val();
+          var days_per_week = +$("#days").val();
+          var weeks_off = +$("#weeks").val();
 
-  </script>
+          var per_hour = 0;
+          console.log(yearly_income);
+          console.log(hours_per_day);
+          console.log(days_per_week);
+          console.log(weeks_off);
+          console.log(hours * days);
+          console.log(52-weeks_off);
+          per_hour = yearly_income / (hours * days * (52-weeks_off))
+
+          alert(per_hour);
+        });
+      });
+ </script>
+ </body>
+
 </html>
